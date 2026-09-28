@@ -16,9 +16,9 @@ STRICT WORKFLOW:
 2. Use the GitHub MCP to fetch the list of changed files.
 3. Focus ONLY on files changed by this pull request.
 4. Invoke these three agents using Task:
-   - codeQualityAnalyzer
-   - testCoverageAnalyzer
-   - refactoringSuggester
+   - Use the code-quality-analyzer agent to analyze each changed source file.
+   - Use the test-coverage-analyzer agent to analyze each changed source file and relevant tests.
+   - Use the refactoring-suggester agent to analyze each changed source file.
 5. Give each agent the repository, pull request number, and changed-file list.
 6. Let each agent perform only its assigned analysis.
 7. Collect the three agent results.
